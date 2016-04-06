@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PrimaryViewController.swift
 //  hw1
 //
 //  Created by Keith Choison on 4/6/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PrimaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBOutlet weak var clickMeBtn:UIButton!
+    
+    @IBAction func clickMeTapped(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("segue", sender:nil)
+        
+    }
+    
 
 }
 
